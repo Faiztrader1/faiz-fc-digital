@@ -1,7 +1,4 @@
-<html>
-        <head><title>Downloaded HTML</title></head>
-        <body>
-            <pre style="white-space: pre-wrap; word-wrap: break-word;"><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -75,6 +72,18 @@
             height: 100%;
         }
 
+        .logo-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-logo-img {
+            height: 45px;
+            width: auto;
+            object-fit: contain;
+        }
+
         .logo {
             font-size: 28px;
             font-weight: 800;
@@ -116,7 +125,15 @@
         /* HERO SECTION */
         .hero {
             text-align: center;
-            padding: 100px 0;
+            padding: 80px 0 100px 0;
+        }
+
+        .hero-logo-img {
+            height: 120px;
+            width: auto;
+            display: block;
+            margin: 0 auto 25px auto;
+            object-fit: contain;
         }
 
         .badge-kuning {
@@ -421,7 +438,10 @@
 
     <nav id="id-navbar">
         <div class="container nav-container">
-            <div class="logo"><span>Faiz FC</span> Digital</div>
+            <div class="logo-wrapper">
+                <img src="logo.jpeg" alt="Logo" class="nav-logo-img">
+                <div class="logo"><span>Faiz FC</span> Digital</div>
+            </div>
             <div class="nav-right">
                 <button class="theme-btn" id="btn-theme" onclick="gantiTema()">☀️ MODE TERANG</button>
                 <a href="https://wa.me/6285268322688" target="_blank" class="btn-top-wa">Hubungi</a>
@@ -431,6 +451,8 @@
 
     <div class="container">
         <section class="hero">
+            <img src="logo.jpeg" alt="Logo Faiz FC Digital" class="hero-logo-img">
+            
             <div class="badge-kuning">WELCOME TO FAIZ FC DIGITAL</div>
             <h1>Solusi Digital Premium & <span>Konveksi Terpercaya</span></h1>
             <p>Solusi Online & Cetak Terlengkap untuk Pribadi, Bisnis, & Perusahaan. Kami siap melejitkan bisnis Anda ke level berikutnya dengan kualitas premium.</p>
@@ -611,6 +633,4 @@
         }
     </script>
 </body>
-</html></pre>
-        </body>
-    </html>
+</html>
