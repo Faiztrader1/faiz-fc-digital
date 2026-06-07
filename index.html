@@ -1,636 +1,965 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faiz FC Digital - Solution & Konveksi</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        :root {
-            --bg-body: #0B1325;
-            --bg-nav: #0F1A30;
-            --bg-card: #0F1A30;
-            --bg-card-alt: #050B14;
-            --text-main: #FFFFFF;
-            --text-muted: #A0AEC0;
-            --gold: #D4AF37;
-            --border-color: #2D3748;
-        }
+  <title>Faiz FC Digital - Jasa Website, SEO Google, Desain Logo, Konveksi dan Sablon</title>
 
-        .light-theme-vars {
-            --bg-body: #F7FAFC;
-            --bg-nav: #FFFFFF;
-            --bg-card: #FFFFFF;
-            --bg-card-alt: #EDF2F7;
-            --text-main: #1A202C;
-            --text-muted: #4A5568;
-            --border-color: #E2E8F0;
-        }
+  <meta name="description" content="Faiz FC Digital adalah layanan jasa digital dan konveksi. Kami melayani pembuatan website, landing page, SEO Google, desain logo, kelola sosial media, bot Telegram, undangan digital, kaos custom, seragam PDH, dan jasa sablon.">
+  <meta name="keywords" content="Faiz FC Digital, jasa pembuatan website, jasa landing page, jasa SEO Google, jasa desain logo, jasa kelola sosial media, jasa bot Telegram, jasa undangan digital, jasa konveksi, jasa sablon, kaos custom, seragam PDH">
+  <meta name="author" content="Faiz FC Digital">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0B1325">
 
-        body {
-            background-color: var(--bg-body);
-            color: var(--text-main);
-            transition: all 0.3s ease;
-            padding-top: 90px;
-        }
+  <link rel="canonical" href="https://faiz-fc-digital.vercel.app/">
 
-        .container {
-            width: 100%;
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 30px;
-        }
+  <meta property="og:title" content="Faiz FC Digital - Jasa Website, SEO Google, Konveksi dan Sablon">
+  <meta property="og:description" content="Solusi jasa digital dan konveksi untuk bisnis, komunitas, dan personal. Layanan website, SEO, logo, sosial media, kaos custom, seragam, dan sablon.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://faiz-fc-digital.vercel.app/">
+  <meta property="og:image" content="https://faiz-fc-digital.vercel.app/logo.jpeg">
 
-        /* NAVBAR */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 90px;
-            background-color: var(--bg-nav);
-            border-bottom: 1px solid var(--border-color);
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Faiz FC Digital - Jasa Digital dan Konveksi">
+  <meta name="twitter:description" content="Jasa website, SEO Google, desain logo, sosial media, konveksi, kaos custom, seragam PDH, dan sablon.">
+  <meta name="twitter:image" content="https://faiz-fc-digital.vercel.app/logo.jpeg">
 
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 100%;
-        }
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Faiz FC Digital",
+    "url": "https://faiz-fc-digital.vercel.app/",
+    "image": "https://faiz-fc-digital.vercel.app/logo.jpeg",
+    "description": "Faiz FC Digital adalah penyedia jasa digital dan konveksi. Layanan meliputi pembuatan website, landing page, SEO Google, desain logo, kelola sosial media, bot Telegram, undangan digital, kaos custom, seragam PDH, dan sablon.",
+    "telephone": "+6285268322688",
+    "sameAs": [
+      "https://www.instagram.com/faizzsharing?igsh=YW5oMWk0c2NhaW81",
+      "https://www.facebook.com/share/1EF6PwJ78P/",
+      "https://www.tiktok.com/@faizzfc17"
+    ],
+    "areaServed": {
+      "@type": "Country",
+      "name": "Indonesia"
+    }
+  }
+  </script>
 
-        .logo-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-        .nav-logo-img {
-            height: 45px;
-            width: auto;
-            object-fit: contain;
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        .logo {
-            font-size: 28px;
-            font-weight: 800;
-            letter-spacing: 1px;
-        }
+    :root {
+      --bg-body: #0B1325;
+      --bg-nav: #0F1A30;
+      --bg-card: #0F1A30;
+      --bg-card-alt: #050B14;
+      --text-main: #FFFFFF;
+      --text-muted: #A0AEC0;
+      --gold: #D4AF37;
+      --border-color: #2D3748;
+      --shadow: rgba(0,0,0,0.28);
+    }
 
-        .logo span {
-            color: var(--gold);
-        }
+    .light-theme-vars {
+      --bg-body: #F7FAFC;
+      --bg-nav: #FFFFFF;
+      --bg-card: #FFFFFF;
+      --bg-card-alt: #EDF2F7;
+      --text-main: #1A202C;
+      --text-muted: #4A5568;
+      --border-color: #E2E8F0;
+      --shadow: rgba(15,23,42,0.10);
+    }
 
-        .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      transition: all 0.3s ease;
+      padding-top: 90px;
+    }
 
-        .theme-btn {
-            background-color: var(--border-color);
-            color: var(--gold);
-            border: none;
-            padding: 12px 20px;
-            border-radius: 50px;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 14px;
-            transition: 0.3s;
-        }
+    a {
+      color: inherit;
+    }
 
-        .btn-top-wa {
-            background: var(--gold);
-            color: #000;
-            padding: 12px 25px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 14px;
-        }
+    .container {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 30px;
+    }
 
-        /* HERO SECTION */
-        .hero {
-            text-align: center;
-            padding: 80px 0 100px 0;
-        }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 90px;
+      background-color: var(--bg-nav);
+      border-bottom: 1px solid var(--border-color);
+      box-shadow: 0 4px 14px var(--shadow);
+      z-index: 1000;
+      transition: all 0.3s ease;
+    }
 
-        .hero-logo-img {
-            height: 120px;
-            width: auto;
-            display: block;
-            margin: 0 auto 25px auto;
-            object-fit: contain;
-        }
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+    }
 
-        .badge-kuning {
-            background: linear-gradient(135deg, #F3E5AB, #D4AF37);
-            color: #000000;
-            font-weight: 800;
-            padding: 10px 30px;
-            border-radius: 50px;
-            display: inline-block;
-            font-size: 13px;
-            letter-spacing: 2px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        }
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
 
-        .hero h1 {
-            font-size: 36px;
-            font-weight: 800;
-            line-height: 1.3;
-            margin-bottom: 25px;
-        }
+    .nav-logo-img {
+      height: 45px;
+      width: auto;
+      object-fit: contain;
+      border-radius: 8px;
+    }
 
-        .hero h1 span {
-            color: var(--gold);
-        }
+    .logo {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
 
-        .hero p {
-            color: var(--text-muted);
-            max-width: 800px;
-            margin: 0 auto 45px auto;
-            font-size: 18px;
-            line-height: 1.7;
-        }
+    .logo span {
+      color: var(--gold);
+    }
 
-        /* PILAR */
-        .pilar-grid {
-            display: grid;
-            grid-template-cols: repeat(2, 1fr);
-            gap: 20px;
-            max-width: 800px;
-            margin: 0 auto 40px auto;
-        }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
 
-        .pilar-card {
-            background-color: var(--bg-card);
-            border: 1px solid var(--border-color);
-            padding: 20px;
-            border-radius: 12px;
-            font-size: 14px;
-            font-weight: 700;
-            text-align: center;
-        }
+    .theme-btn {
+      background-color: var(--border-color);
+      color: var(--gold);
+      border: none;
+      padding: 12px 18px;
+      border-radius: 50px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 13px;
+      transition: 0.3s;
+      white-space: nowrap;
+    }
 
-        .pilar-card div {
-            color: var(--gold);
-            font-size: 24px;
-            margin-bottom: 8px;
-        }
+    .btn-top-wa {
+      background: var(--gold);
+      color: #000;
+      padding: 12px 22px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      white-space: nowrap;
+    }
 
-        /* LAYANAN UTAMA */
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-            font-size: 36px;
-            font-weight: 700;
-        }
+    .hero {
+      text-align: center;
+      padding: 80px 0 100px 0;
+    }
 
-        .section-title span {
-            color: var(--gold);
-        }
+    .hero-logo-img {
+      height: 120px;
+      width: auto;
+      display: block;
+      margin: 0 auto 25px auto;
+      object-fit: contain;
+      border-radius: 16px;
+    }
 
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background-color: var(--gold);
-            margin: 15px auto 0 auto;
-            border-radius: 10px;
-        }
+    .badge-kuning {
+      background: linear-gradient(135deg, #F3E5AB, #D4AF37);
+      color: #000000;
+      font-weight: 800;
+      padding: 10px 30px;
+      border-radius: 50px;
+      display: inline-block;
+      font-size: 13px;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
 
-        .layanan-section {
-            background-color: var(--bg-card-alt);
-            padding: 100px 0;
-            transition: all 0.3s;
-        }
+    .hero h1 {
+      font-size: 40px;
+      font-weight: 800;
+      line-height: 1.25;
+      margin-bottom: 25px;
+    }
 
-        .grid-layanan {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 30px;
-        }
+    .hero h1 span {
+      color: var(--gold);
+    }
 
-        @media (min-width: 768px) {
-            .grid-layanan { grid-template-columns: repeat(2, 1fr); }
-            .hero h1 { font-size: 56px; }
-            .pilar-grid { grid-template-cols: repeat(4, 1fr); }
-        }
-        @media (min-width: 1024px) {
-            .grid-layanan { grid-template-columns: repeat(3, 1fr); }
-        }
+    .hero p {
+      color: var(--text-muted);
+      max-width: 850px;
+      margin: 0 auto 45px auto;
+      font-size: 18px;
+      line-height: 1.7;
+    }
 
-        .card {
-            background-color: var(--bg-card);
-            border: 1px solid var(--border-color);
-            padding: 35px;
-            border-radius: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: transform 0.3s ease, border-color 0.3s;
-        }
+    .hero-cta {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
 
-        .card:hover {
-            transform: translateY(-8px);
-            border-color: var(--gold);
-        }
+    .btn-main {
+      display: inline-block;
+      background: var(--gold);
+      color: #000;
+      padding: 14px 26px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 800;
+      border: 1px solid var(--gold);
+    }
 
-        .card-icon {
-            font-size: 32px;
-            color: var(--gold);
-            margin-bottom: 20px;
-        }
+    .btn-secondary {
+      display: inline-block;
+      background: transparent;
+      color: var(--gold);
+      padding: 14px 26px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 800;
+      border: 1px solid var(--gold);
+    }
 
-        .card h3 {
-            font-size: 22px;
-            margin-bottom: 12px;
-        }
+    .pilar-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      max-width: 850px;
+      margin: 0 auto;
+    }
 
-        .card p {
-            color: var(--text-muted);
-            font-size: 15px;
-            line-height: 1.6;
-            margin-bottom: 25px;
-        }
+    .pilar-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 20px;
+      border-radius: 14px;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+      box-shadow: 0 10px 24px var(--shadow);
+    }
 
-        .btn-booking {
-            display: block;
-            text-align: center;
-            padding: 12px;
-            border: 1px solid var(--gold);
-            color: var(--gold);
-            text-decoration: none;
-            border-radius: 10px;
-            font-size: 14px;
-            font-weight: 600;
-            transition: 0.3s;
-        }
+    .pilar-card div {
+      color: var(--gold);
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
 
-        .btn-booking:hover {
-            background-color: var(--gold);
-            color: #000000;
-        }
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 36px;
+      font-weight: 700;
+    }
 
-        /* SECTION TESTIMONI / SABLON */
-        .testimoni-section {
-            padding: 100px 0;
-        }
+    .section-title span {
+      color: var(--gold);
+    }
 
-        .testi-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 30px;
-        }
-        @media (min-width: 768px) {
-            .testi-grid { grid-template-columns: repeat(3, 1fr); }
-        }
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background-color: var(--gold);
+      margin: 15px auto 0 auto;
+      border-radius: 10px;
+    }
 
-        .testi-card {
-            background-color: var(--bg-card);
-            border: 1px solid var(--border-color);
-            padding: 35px;
-            border-radius: 20px;
-            text-align: center;
-        }
+    .layanan-section {
+      background-color: var(--bg-card-alt);
+      padding: 100px 0;
+      transition: all 0.3s;
+    }
 
-        .avatar {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin: 0 auto 20px auto;
-            border: 3px solid var(--gold);
-            object-fit: cover;
-            display: block;
-        }
+    .grid-layanan {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
 
-        .bintang {
-            color: #FFD700;
-            font-size: 18px;
-            margin-bottom: 12px;
-            letter-spacing: 2px;
-        }
+    .card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 35px;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s ease, border-color 0.3s;
+      box-shadow: 0 10px 24px var(--shadow);
+    }
 
-        .testi-card h4 {
-            font-size: 18px;
-            margin-bottom: 5px;
-        }
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: var(--gold);
+    }
 
-        .testi-card .role {
-            color: var(--gold);
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
+    .card-icon {
+      font-size: 32px;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
 
-        .testi-card .ulasan {
-            font-style: italic;
-            color: var(--text-muted);
-            font-size: 15px;
-            line-height: 1.6;
-        }
+    .card h3 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
 
-        /* KONTAK */
-        .kontak-section {
-            padding: 100px 0;
-            background-color: var(--bg-card-alt);
-        }
+    .card p {
+      color: var(--text-muted);
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
 
-        .kontak-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 50px;
-        }
-        @media (min-width: 768px) {
-            .kontak-grid { grid-template-columns: 1.1fr 0.9fr; }
-        }
+    .btn-booking {
+      display: block;
+      text-align: center;
+      padding: 12px;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      text-decoration: none;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
 
-        .sosmed-list {
-            margin-top: 30px;
-        }
+    .btn-booking:hover {
+      background-color: var(--gold);
+      color: #000000;
+    }
 
-        .sosmed-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 25px;
-            font-size: 16px;
-        }
+    .seo-section {
+      padding: 100px 0;
+    }
 
-        .sosmed-item a {
-            color: var(--text-main);
-            text-decoration: none;
-            font-weight: 500;
-        }
+    .seo-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 22px;
+      padding: 34px;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 24px var(--shadow);
+    }
 
-        .sosmed-item a:hover {
-            color: var(--gold);
-        }
+    .seo-box h2 {
+      color: var(--text-main);
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
 
-        form {
-            background-color: var(--bg-card);
-            padding: 40px;
-            border-radius: 20px;
-            border: 1px solid var(--border-color);
-        }
+    .seo-box p {
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 14px;
+      font-size: 16px;
+    }
 
-        .form-group {
-            margin-bottom: 20px;
-        }
+    .testimoni-section {
+      padding: 100px 0;
+    }
 
-        .form-group label {
-            display: block;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            color: var(--text-muted);
-        }
+    .testi-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
 
-        .form-group input, .form-group select, .form-group textarea {
-            width: 100%;
-            padding: 14px;
-            background-color: var(--bg-body);
-            border: 1px solid var(--border-color);
-            color: var(--text-main);
-            border-radius: 10px;
-            font-size: 15px;
-        }
+    .testi-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 35px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 24px var(--shadow);
+    }
 
-        .btn-submit {
-            width: 100%;
-            background: var(--gold);
-            color: #000;
-            border: none;
-            padding: 16px;
-            border-radius: 10px;
-            font-weight: bold;
-            cursor: pointer;
-            font-size: 16px;
-        }
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 0 auto 20px auto;
+      border: 3px solid var(--gold);
+      object-fit: cover;
+      display: block;
+    }
 
-        footer {
-            text-align: center;
-            padding: 40px;
-            font-size: 14px;
-            color: var(--text-muted);
-            border-top: 1px solid var(--border-color);
-        }
-    </style>
+    .bintang {
+      color: #FFD700;
+      font-size: 18px;
+      margin-bottom: 12px;
+      letter-spacing: 2px;
+    }
+
+    .testi-card h4 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .testi-card .role {
+      color: var(--gold);
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .testi-card .ulasan {
+      font-style: italic;
+      color: var(--text-muted);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .faq-section {
+      padding: 100px 0;
+      background: var(--bg-card-alt);
+    }
+
+    .faq-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 18px;
+      padding: 24px;
+      margin-bottom: 18px;
+      box-shadow: 0 10px 24px var(--shadow);
+    }
+
+    .faq-item h3 {
+      margin-bottom: 10px;
+      color: var(--text-main);
+      font-size: 20px;
+    }
+
+    .faq-item p {
+      color: var(--text-muted);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    .kontak-section {
+      padding: 100px 0;
+      background-color: var(--bg-card-alt);
+    }
+
+    .kontak-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 50px;
+    }
+
+    .sosmed-list {
+      margin-top: 30px;
+    }
+
+    .sosmed-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 25px;
+      font-size: 16px;
+      color: var(--text-muted);
+    }
+
+    .sosmed-item a {
+      color: var(--text-main);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .sosmed-item a:hover {
+      color: var(--gold);
+    }
+
+    form {
+      background-color: var(--bg-card);
+      padding: 40px;
+      border-radius: 20px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 10px 24px var(--shadow);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px;
+      background-color: var(--bg-body);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      border-radius: 10px;
+      font-size: 15px;
+    }
+
+    .btn-submit {
+      width: 100%;
+      background: var(--gold);
+      color: #000;
+      border: none;
+      padding: 16px;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      font-size: 14px;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-color);
+    }
+
+    @media (min-width: 768px) {
+      .grid-layanan {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero h1 {
+        font-size: 56px;
+      }
+
+      .pilar-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .testi-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .kontak-grid {
+        grid-template-columns: 1.1fr 0.9fr;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .grid-layanan {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 650px) {
+      body {
+        padding-top: 80px;
+      }
+
+      nav {
+        height: 80px;
+      }
+
+      .container {
+        padding: 0 18px;
+      }
+
+      .logo {
+        font-size: 18px;
+      }
+
+      .nav-logo-img {
+        height: 36px;
+      }
+
+      .nav-right {
+        gap: 8px;
+      }
+
+      .theme-btn {
+        padding: 10px 12px;
+        font-size: 11px;
+      }
+
+      .btn-top-wa {
+        padding: 10px 14px;
+        font-size: 12px;
+      }
+
+      .hero {
+        padding: 50px 0 70px;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .hero-logo-img {
+        height: 95px;
+      }
+
+      .section-title {
+        font-size: 28px;
+      }
+
+      .pilar-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .seo-box {
+        padding: 24px;
+      }
+
+      .seo-box h2 {
+        font-size: 23px;
+      }
+
+      form {
+        padding: 24px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-    <nav id="id-navbar">
-        <div class="container nav-container">
-            <div class="logo-wrapper">
-                <img src="logo.jpeg" alt="Logo" class="nav-logo-img">
-                <div class="logo"><span>Faiz FC</span> Digital</div>
-            </div>
-            <div class="nav-right">
-                <button class="theme-btn" id="btn-theme" onclick="gantiTema()">☀️ MODE TERANG</button>
-                <a href="https://wa.me/6285268322688" target="_blank" class="btn-top-wa">Hubungi</a>
-            </div>
-        </div>
-    </nav>
-
-    <div class="container">
-        <section class="hero">
-            <img src="logo.jpeg" alt="Logo Faiz FC Digital" class="hero-logo-img">
-            
-            <div class="badge-kuning">WELCOME TO FAIZ FC DIGITAL</div>
-            <h1>Solusi Digital Premium & <span>Konveksi Terpercaya</span></h1>
-            <p>Solusi Online & Cetak Terlengkap untuk Pribadi, Bisnis, & Perusahaan. Kami siap melejitkan bisnis Anda ke level berikutnya dengan kualitas premium.</p>
-            
-            <div class="pilar-grid">
-                <div class="pilar-card"><div>⚡</div>CEPAT</div>
-                <div class="pilar-card"><div>🏆</div>BERKUALITAS</div>
-                <div class="pilar-card"><div>🤝</div>TERPERCAYA</div>
-                <div class="pilar-card"><div>🎧</div>FAST RESPONS</div>
-            </div>
-        </section>
+  <nav id="id-navbar">
+    <div class="container nav-container">
+      <div class="logo-wrapper">
+        <img src="logo.jpeg" alt="Logo Faiz FC Digital" class="nav-logo-img">
+        <div class="logo"><span>Faiz FC</span> Digital</div>
+      </div>
+      <div class="nav-right">
+        <button class="theme-btn" id="btn-theme" onclick="gantiTema()">☀️ MODE TERANG</button>
+        <a href="https://wa.me/6285268322688" target="_blank" class="btn-top-wa">Hubungi</a>
+      </div>
     </div>
+  </nav>
 
-    <section class="layanan-section">
-        <div class="container">
-            <h2 class="section-title">Layanan <span>Digital & IT</span></h2>
-            
-            <div class="grid-layanan">
-                <script>
-                    const dataJasa = [
-                        {id: 1, nama: "Pembuatan Website", simbol: "🌐", ket: "Website bisnis, company profile, toko online dll. Profesional & responsif."},
-                        {id: 2, nama: "Landing Page Produk", simbol: "📄", ket: "Landing page menarik untuk meningkatkan konversi penjualan produk Anda."},
-                        {id: 3, nama: "Bot Telegram & Discord", simbol: "🤖", ket: "Bot otomatis kustom cerdas untuk mempermudah operasional bisnis."},
-                        {id: 4, nama: "Desain Logo & Branding", simbol: "✏️", ket: "Identitas brand kuat, logo unik, mewah, serta berkesan bagi konsumen."},
-                        {id: 5, nama: "Edit Video Konten", simbol: "🎬", ket: "Edit video pendek TikTok/Reels/Shorts dengan transisi estetik, siap viral!"},
-                        {id: 6, nama: "Kelola Sosial Media", simbol: "📈", ket: "Optimasi akun Instagram/TikTok. Konten terjadwal & pembuatan copywriting."},
-                        {id: 7, nama: "Iklan FB & IG Ads", simbol: "📣", ket: "Optimasi manajemen iklan berbayar untuk meningkatkan jangkauan bisnis."},
-                        {id: 8, nama: "SEO Google Website", simbol: "🔍", ket: "Optimasi SEO On-Page & Off-Page agar web nangkring di halaman satu Google."},
-                        {id: 9, nama: "Upload Produk Marketplace", simbol: "🛒", ket: "Jasa upload produk massal ke toko online rapi dan ramah pencarian."},
-                        {id: 10, nama: "AI Chatbot Bisnis", simbol: "💡", ket: "Chatbot pintar berbasis kecerdasan buatan untuk melayani customer 24 jam."},
-                        {id: 11, nama: "Undangan Digital", simbol: "💌", ket: "Undangan pernikahan/acara digital modern berbentuk link website premium."},
-                        {id: 12, nama: "Recovery Akun Sosmed", simbol: "🛡️", ket: "Bantuan pemulihan akun media sosial yang terkunci atau bermasalah."},
-                        {id: 13, nama: "Kelola Komunitas Server", simbol: "💬", ket: "Setup & kelola manajemen komunitas premium di Discord atau Telegram."}
-                    ];
+  <header class="container">
+    <section class="hero">
+      <img src="logo.jpeg" alt="Logo Faiz FC Digital" class="hero-logo-img">
 
-                    document.write(dataJasa.map(j => `
-                        <div class="card">
-                            <div>
-                                <div class="card-icon">${j.simbol}</div>
-                                <h3>${j.id}. ${j.nama}</h3>
-                                <p>${j.ket}</p>
-                            </div>
-                            <a href="https://wa.me/6285268322688?text=Halo%20Faiz%20FC%20Digital%2C%20saya%20tertarik%20booking%20jasa%20*${encodeURIComponent(j.nama)}*" target="_blank" class="btn-booking">
-                                📞 Booking Via WA
-                            </a>
-                        </div>
-                    `).join(''));
-                </script>
-            </div>
-        </div>
+      <div class="badge-kuning">WELCOME TO FAIZ FC DIGITAL</div>
+
+      <h1>Jasa Website, SEO Google, Desain Logo & <span>Konveksi Terpercaya</span></h1>
+
+      <p>
+        Faiz FC Digital menyediakan solusi digital dan cetak untuk personal, bisnis, komunitas, dan perusahaan.
+        Kami melayani pembuatan website, landing page, SEO Google, desain logo, kelola sosial media,
+        bot Telegram, undangan digital, kaos custom, seragam PDH, dan jasa sablon.
+      </p>
+
+      <div class="hero-cta">
+        <a href="https://wa.me/6285268322688?text=Halo%20Faiz%20FC%20Digital%2C%20saya%20ingin%20konsultasi%20jasa" target="_blank" class="btn-main">Konsultasi Gratis</a>
+        <a href="#layanan" class="btn-secondary">Lihat Layanan</a>
+      </div>
+
+      <div class="pilar-grid">
+        <div class="pilar-card"><div>⚡</div>CEPAT</div>
+        <div class="pilar-card"><div>🏆</div>BERKUALITAS</div>
+        <div class="pilar-card"><div>🤝</div>TERPERCAYA</div>
+        <div class="pilar-card"><div>🎧</div>FAST RESPONS</div>
+      </div>
     </section>
+  </header>
 
-    <section class="testimoni-section">
-        <div class="container">
-            <h2 class="section-title">Konveksi & <span>Sablon</span></h2>
-            <div class="testi-grid">
-                <div class="testi-card">
-                    <div style="font-size: 45px; margin-bottom: 15px;">👕</div>
-                    <h4 style="margin-bottom: 12px;">Seragam PDH</h4>
-                    <p style="color: var(--text-muted); font-size: 15px; margin-bottom: 20px;">Desain kustom, jahitan kuat rapi, bahan kain premium drill.</p>
-                    <a href="https://wa.me/6285268322688?text=Halo%20Faiz%20FC%20Digital%2C%20order%20Seragam%20PDH" target="_blank" class="btn-booking">Booking WA</a>
-                </div>
-                <div class="testi-card">
-                    <div style="font-size: 45px; margin-bottom: 15px;">✂️</div>
-                    <h4 style="margin-bottom: 12px;">Kaos Custom</h4>
-                    <p style="color: var(--text-muted); font-size: 15px; margin-bottom: 20px;">Bahan katun combed premium sangat lembut, dingin, bebas kustom gambar.</p>
-                    <a href="https://wa.me/6285268322688?text=Halo%20Faiz%20FC%20Digital%2C%20order%20Kaos%20Custom" target="_blank" class="btn-booking">Booking WA</a>
-                </div>
-                <div class="testi-card">
-                    <div style="font-size: 45px; margin-bottom: 15px;">🎨</div>
-                    <h4 style="margin-bottom: 12px;">Jasa Sablon</h4>
-                    <p style="color: var(--text-muted); font-size: 15px; margin-bottom: 20px;">Hasil cetak sablon tajam, pekat, tidak pecah atau luntur jika dicuci.</p>
-                    <a href="https://wa.me/6285268322688?text=Halo%20Faiz%20FC%20Digital%2C%20booking%20Jasa%20Sablon" target="_blank" class="btn-booking">Booking WA</a>
-                </div>
-            </div>
+  <section class="layanan-section" id="layanan">
+    <div class="container">
+      <h2 class="section-title">Layanan <span>Digital & IT</span></h2>
+
+      <div class="grid-layanan" id="layananDigital"></div>
+    </div>
+  </section>
+
+  <section class="seo-section">
+    <div class="container">
+
+      <div class="seo-box">
+        <h2>Jasa Pembuatan Website untuk Bisnis</h2>
+        <p>
+          Website membantu bisnis terlihat lebih profesional dan mudah ditemukan calon pelanggan.
+          Faiz FC Digital melayani pembuatan website company profile, website jasa, website toko online,
+          dan landing page promosi.
+        </p>
+        <p>
+          Setiap website dibuat responsif agar nyaman dibuka melalui HP, tablet, dan komputer.
+          Struktur halaman juga disiapkan agar lebih mudah dipahami oleh mesin pencari.
+        </p>
+      </div>
+
+      <div class="seo-box">
+        <h2>Jasa SEO Google Website</h2>
+        <p>
+          SEO Google membantu website lebih mudah ditemukan melalui pencarian.
+          Faiz FC Digital membantu optimasi title, meta description, struktur halaman,
+          kata kunci, konten, robots.txt, sitemap, dan Google Search Console.
+        </p>
+        <p>
+          Layanan ini cocok untuk pemilik bisnis yang ingin websitenya tampil lebih rapi,
+          mudah dibaca Google, dan punya peluang lebih besar muncul di hasil pencarian.
+        </p>
+      </div>
+
+      <div class="seo-box">
+        <h2>Jasa Konveksi, Kaos Custom, Seragam dan Sablon</h2>
+        <p>
+          Selain jasa digital, Faiz FC Digital juga melayani kebutuhan konveksi seperti kaos custom,
+          seragam PDH, kemeja komunitas, dan jasa sablon. Cocok untuk komunitas, event,
+          organisasi, sekolah, dan kebutuhan bisnis.
+        </p>
+        <p>
+          Proses pemesanan bisa dilakukan langsung melalui WhatsApp dengan konsultasi desain,
+          pilihan bahan, jumlah pesanan, dan estimasi pengerjaan.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="testimoni-section">
+    <div class="container">
+      <h2 class="section-title">Konveksi & <span>Sablon</span></h2>
+
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div style="font-size: 45px; margin-bottom: 15px;">👕</div>
+          <h4 style="margin-bottom: 12px;">Seragam PDH</h4>
+          <p style="color: var(--text-muted); font-size: 15px; margin-bottom: 20px;">Desain kustom, jahitan kuat rapi, bahan kain premium drill.</p>
+          <a href="https://wa.me/6285268322688?text=Halo%20Faiz%20FC%20Digital%2C%20order%20Seragam%20PDH" target="_blank" class="btn-booking">Booking WA</a>
         </div>
-    </section>
 
-    <section class="layanan-section" id="testimoni">
-        <div class="container">
-            <h2 class="section-title">Testimoni <span>Pelanggan Puas</span></h2>
-            <div class="testi-grid">
-                <div class="testi-card">
-                    <img src="https://images.unsplash.com/photo-1540569014015-19a7be504e3a?auto=format&fit=crop&q=80&w=200" class="avatar" alt="Andi">
-                    <div class="bintang">★★★★★</div>
-                    <h4>Andi</h4>
-                    <div class="role">Usahawan Kuliner</div>
-                    <p class="ulasan">"Faiz FC Digital membantu mendesain kaos komunitas dan buat landing page jualan kuliner saya. Hasilnya premium, respons cepat, dan sangat terpercaya!"</p>
-                </div>
-                
-                <div class="testi-card">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200" class="avatar" alt="Sari - Hijab">
-                    <div class="bintang">★★★★★</div>
-                    <h4>Sari</h4>
-                    <div class="role">Pemilik Toko Online</div>
-                    <p class="ulasan">"Landing page bikinan Faiz FC Digital sangat bagus, ringan dibuka di HP dan komputer. Sangat puas dengan layanan digital kustomnya."</p>
-                </div>
-                
-                <div class="testi-card">
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=200" class="avatar" alt="Reza - Rombongan">
-                    <div class="bintang">★★★★★</div>
-                    <h4>Reza & Tim</h4>
-                    <div class="role">Ketua Komunitas Motor</div>
-                    <p class="ulasan">"Pesan kemeja PDH komunitas di sini kualitasnya juara. Bordiran presisi dan jahitannya rapi banget. Sukses selalu untuk Faiz FC Digital!"</p>
-                </div>
-            </div>
+        <div class="testi-card">
+          <div style="font-size: 45px; margin-bottom: 15px;">✂️</div>
+          <h4 style="margin-bottom: 12px;">Kaos Custom</h4>
+          <p style="color: var(--text-muted); font-size: 15px; margin-bottom: 20px;">Bahan katun combed premium, nyaman dipakai, dan bisa custom desain.</p>
+          <a href="https://wa.me/6285268322688?text=Halo%20Faiz%20FC%20Digital%2C%20order%20Kaos%20Custom" target="_blank" class="btn-booking">Booking WA</a>
         </div>
-    </section>
 
-    <section class="kontak-section">
-        <div class="container">
-            <div class="kontak-grid">
-                <div>
-                    <h2 style="font-size: 32px; margin-bottom: 20px;">Siap Bermitra Dengan Kami?</h2>
-                    <p style="color: var(--text-muted); margin-bottom: 35px; font-size: 16px;">Hubungi kontak resmi kami di bawah ini untuk memulai proyek Anda bersama Faiz FC Digital.</p>
-                    
-                    <div class="sosmed-list">
-                        <div class="sosmed-item">🟢 <a href="https://wa.me/6285268322688" target="_blank">WhatsApp 1: 0852-6832-2688</a></div>
-                        <div class="sosmed-item">🟢 <a href="https://wa.me/6285769714035" target="_blank">WhatsApp 2: 0857-6971-4035</a></div>
-                        <div class="sosmed-item">📸 <a href="https://www.instagram.com/faizzsharing?igsh=YW5oMWk0c2NhaW81" target="_blank">Instagram: @faizzsharing</a></div>
-                        <div class="sosmed-item">🔵 <a href="https://www.facebook.com/share/1EF6PwJ78P/" target="_blank">Facebook: Fanspage Resmi</a></div>
-                        <div class="sosmed-item">⚫ <a href="https://www.tiktok.com/@faizzfc17?_r=1&_t=ZS-96Oqen1qxee" target="_blank">TikTok: @faizzfc17</a></div>
-                    </div>
-                </div>
-
-                <div>
-                    <form onsubmit="kirimForm(event)">
-                        <div class="form-group">
-                            <label>Nama Lengkap</label>
-                            <input type="text" id="inp-nama" placeholder="Contoh: Budi Santoso" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Pilih Layanan Jasa</label>
-                            <select id="inp-jasa">
-                                <option value="Pembuatan Website">Pembuatan Website</option>
-                                <option value="Landing Page Produk">Landing Page Jualan</option>
-                                <option value="Edit Video Konten">Edit Video TikTok/Reels</option>
-                                <option value="Konveksi Kaos / Seragam">Konveksi & Sablon</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Pesan Tambahan</label>
-                            <textarea id="inp-pesan" rows="5" placeholder="Detail pesanan kustom Anda..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn-submit">🚀 Kirim Form ke WhatsApp</button>
-                    </form>
-                </div>
-            </div>
+        <div class="testi-card">
+          <div style="font-size: 45px; margin-bottom: 15px;">🎨</div>
+          <h4 style="margin-bottom: 12px;">Jasa Sablon</h4>
+          <p style="color: var(--text-muted); font-size: 15px; margin-bottom: 20px;">Hasil cetak sablon tajam, pekat, dan cocok untuk kebutuhan komunitas.</p>
+          <a href="https://wa.me/6285268322688?text=Halo%20Faiz%20FC%20Digital%2C%20booking%20Jasa%20Sablon" target="_blank" class="btn-booking">Booking WA</a>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <p>© 2026 Faiz FC Digital. Seluruh Hak Cipta Dilindungi.</p>
-    </footer>
+  <section class="layanan-section" id="testimoni">
+    <div class="container">
+      <h2 class="section-title">Testimoni <span>Pelanggan Puas</span></h2>
 
-    <script>
-        function kirimForm(e) {
-            e.preventDefault();
-            const nama = document.getElementById('inp-nama').value;
-            const jasa = document.getElementById('inp-jasa').value;
-            const pesan = document.getElementById('inp-pesan').value;
-            
-            const teks = `Halo Faiz FC Digital, saya *${nama}*\n\nIngin memesan layanan: *${jasa}*\nDetail Catatan:\n${pesan}`;
-            window.open(`https://wa.me/6285268322688?text=${encodeURIComponent(teks)}`, '_blank');
-        }
+      <div class="testi-grid">
+        <div class="testi-card">
+          <img src="https://images.unsplash.com/photo-1540569014015-19a7be504e3a?auto=format&fit=crop&q=80&w=200" class="avatar" alt="Testimoni pelanggan jasa website Faiz FC Digital">
+          <div class="bintang">★★★★★</div>
+          <h4>Andi</h4>
+          <div class="role">Usahawan Kuliner</div>
+          <p class="ulasan">"Faiz FC Digital membantu membuat landing page jualan kuliner saya. Hasilnya rapi, ringan, dan mudah dibuka di HP."</p>
+        </div>
 
-        function gantiTema() {
-            const body = document.body;
-            const btn = document.getElementById('btn-theme');
-            
-            if (body.classList.contains('light-theme-vars')) {
-                body.classList.remove('light-theme-vars');
-                btn.innerHTML = "☀️ MODE TERANG";
-            } else {
-                body.classList.add('light-theme-vars');
-                btn.innerHTML = "🌙 MODE GELAP";
-            }
-        }
-    </script>
+        <div class="testi-card">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200" class="avatar" alt="Testimoni pelanggan landing page Faiz FC Digital">
+          <div class="bintang">★★★★★</div>
+          <h4>Sari</h4>
+          <div class="role">Pemilik Toko Online</div>
+          <p class="ulasan">"Landing page bikinan Faiz FC Digital sangat bagus. Tampilannya profesional dan mudah dipakai untuk promosi."</p>
+        </div>
+
+        <div class="testi-card">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=200" class="avatar" alt="Testimoni pelanggan konveksi Faiz FC Digital">
+          <div class="bintang">★★★★★</div>
+          <h4>Reza & Tim</h4>
+          <div class="role">Ketua Komunitas Motor</div>
+          <p class="ulasan">"Pesan kemeja PDH komunitas hasilnya rapi. Bordiran presisi dan jahitannya bagus."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="container">
+      <h2 class="section-title">Pertanyaan <span>Umum</span></h2>
+
+      <div class="faq-item">
+        <h3>Apa saja layanan Faiz FC Digital?</h3>
+        <p>
+          Faiz FC Digital melayani pembuatan website, landing page, SEO Google, desain logo,
+          kelola sosial media, edit video, bot Telegram, bot Discord, undangan digital,
+          konveksi, kaos custom, seragam PDH, dan jasa sablon.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Apakah bisa membuat website untuk bisnis?</h3>
+        <p>
+          Bisa. Kami membantu membuat website bisnis, company profile, landing page produk,
+          toko online sederhana, dan website jasa sesuai kebutuhan.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Apakah bisa membantu SEO Google?</h3>
+        <p>
+          Bisa. Kami membantu optimasi SEO dasar seperti title, meta description, struktur konten,
+          sitemap, robots.txt, dan pendaftaran website ke Google Search Console.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Apakah melayani konveksi dan sablon?</h3>
+        <p>
+          Bisa. Kami melayani kaos custom, seragam PDH, kemeja komunitas, dan sablon untuk kebutuhan
+          bisnis, komunitas, organisasi, atau event.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="kontak-section">
+    <div class="container">
+      <div class="kontak-grid">
+        <div>
+          <h2 style="font-size: 32px; margin-bottom: 20px;">Siap Bermitra Dengan Kami?</h2>
+          <p style="color: var(--text-muted); margin-bottom: 35px; font-size: 16px;">
+            Hubungi kontak resmi kami untuk konsultasi jasa digital, website, SEO Google, desain logo,
+            konveksi, kaos custom, seragam, dan sablon.
+          </p>
+
+          <div class="sosmed-list">
+            <div class="sosmed-item">🟢 <a href="https://wa.me/6285268322688" target="_blank">WhatsApp 1: 0852-6832-2688</a></div>
+            <div class="sosmed-item">🟢 <a href="https://wa.me/6285769714035" target="_blank">WhatsApp 2: 0857-6971-4035</a></div>
+            <div class="sosmed-item">📸 <a href="https://www.instagram.com/faizzsharing?igsh=YW5oMWk0c2NhaW81" target="_blank">Instagram: @faizzsharing</a></div>
+            <div class="sosmed-item">🔵 <a href="https://www.facebook.com/share/1EF6PwJ78P/" target="_blank">Facebook: Fanspage Resmi</a></div>
+            <div class="sosmed-item">⚫ <a href="https://www.tiktok.com/@faizzfc17?_r=1&_t=ZS-96Oqen1qxee" target="_blank">TikTok: @faizzfc17</a></div>
+          </div>
+        </div>
+
+        <div>
+          <form onsubmit="kirimForm(event)">
+            <div class="form-group">
+              <label>Nama Lengkap</label>
+              <input type="text" id="inp-nama" placeholder="Contoh: Budi Santoso" required>
+            </div>
+
+            <div class="form-group">
+              <label>Pilih Layanan Jasa</label>
+              <select id="inp-jasa">
+                <option value="Pembuatan Website">Pembuatan Website</option>
+                <option value="Landing Page Produk">Landing Page Jualan</option>
+                <option value="SEO Google Website">SEO Google Website</option>
+                <option value="Desain Logo dan Branding">Desain Logo dan Branding</option>
+                <option value="Edit Video Konten">Edit Video TikTok/Reels</option>
+                <option value="Kelola Sosial Media">Kelola Sosial Media</option>
+                <option value="Konveksi Kaos / Seragam">Konveksi & Sablon</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Pesan Tambahan</label>
+              <textarea id="inp-pesan" rows="5" placeholder="Detail pesanan kustom Anda..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">🚀 Kirim Form ke WhatsApp</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Faiz FC Digital. Seluruh Hak Cipta Dilindungi.</p>
+  </footer>
+
+  <script>
+    const dataJasa = [
+      {id: 1, nama: "Pembuatan Website", simbol: "🌐", ket: "Website bisnis, company profile, toko online, portofolio, dan website jasa yang responsif."},
+      {id: 2, nama: "Landing Page Produk", simbol: "📄", ket: "Landing page promosi untuk meningkatkan kepercayaan dan konversi penjualan produk."},
+      {id: 3, nama: "Bot Telegram & Discord", simbol: "🤖", ket: "Bot otomatis untuk komunitas, notifikasi, sistem order, dan kebutuhan operasional digital."},
+      {id: 4, nama: "Desain Logo & Branding", simbol: "✏️", ket: "Logo, identitas brand, desain visual, dan kebutuhan branding bisnis agar terlihat profesional."},
+      {id: 5, nama: "Edit Video Konten", simbol: "🎬", ket: "Edit video pendek untuk TikTok, Reels, dan Shorts dengan hasil rapi dan siap posting."},
+      {id: 6, nama: "Kelola Sosial Media", simbol: "📈", ket: "Bantuan konten, jadwal posting, caption, dan optimasi akun Instagram atau TikTok."},
+      {id: 7, nama: "Iklan FB & IG Ads", simbol: "📣", ket: "Bantuan setting dan optimasi iklan berbayar untuk menjangkau calon pelanggan."},
+      {id: 8, nama: "SEO Google Website", simbol: "🔍", ket: "Optimasi title, deskripsi, konten, sitemap, robots.txt, dan Google Search Console."},
+      {id: 9, nama: "Upload Produk Marketplace", simbol: "🛒", ket: "Jasa upload produk ke marketplace agar toko terlihat rapi dan mudah ditemukan."},
+      {id: 10, nama: "AI Chatbot Bisnis", simbol: "💡", ket: "Chatbot pintar untuk membantu menjawab pertanyaan customer secara otomatis."},
+      {id: 11, nama: "Undangan Digital", simbol: "💌", ket: "Undangan online modern berbentuk link website untuk pernikahan dan acara lainnya."},
+      {id: 12, nama: "Recovery Akun Sosmed", simbol: "🛡️", ket: "Bantuan pemulihan akun media sosial yang terkunci atau bermasalah."},
+      {id: 13, nama: "Kelola Komunitas Server", simbol: "💬", ket: "Setup dan pengelolaan komunitas di Discord atau Telegram agar lebih tertata."}
+    ];
+
+    document.getElementById("layananDigital").innerHTML = dataJasa.map(j => `
+      <div class="card">
+        <div>
+          <div class="card-icon">${j.simbol}</div>
+          <h3>${j.id}. ${j.nama}</h3>
+          <p>${j.ket}</p>
+        </div>
+        <a href="https://wa.me/6285268322688?text=Halo%20Faiz%20FC%20Digital%2C%20saya%20tertarik%20booking%20jasa%20${encodeURIComponent(j.nama)}" target="_blank" class="btn-booking">
+          📞 Booking Via WA
+        </a>
+      </div>
+    `).join("");
+
+    function kirimForm(e) {
+      e.preventDefault();
+
+      const nama = document.getElementById('inp-nama').value;
+      const jasa = document.getElementById('inp-jasa').value;
+      const pesan = document.getElementById('inp-pesan').value;
+
+      const teks = `Halo Faiz FC Digital, saya *${nama}*\n\nIngin memesan layanan: *${jasa}*\nDetail Catatan:\n${pesan}`;
+      window.open(`https://wa.me/6285268322688?text=${encodeURIComponent(teks)}`, '_blank');
+    }
+
+    function gantiTema() {
+      const body = document.body;
+      const btn = document.getElementById('btn-theme');
+
+      if (body.classList.contains('light-theme-vars')) {
+        body.classList.remove('light-theme-vars');
+        btn.innerHTML = "☀️ MODE TERANG";
+      } else {
+        body.classList.add('light-theme-vars');
+        btn.innerHTML = "🌙 MODE GELAP";
+      }
+    }
+  </script>
+
 </body>
 </html>
